@@ -27,10 +27,13 @@ export default function App() {
       console.log(typeof lossPercent);
 
       setResult(
-        `😔 Hey,You have made  loss 📉 of ${loss} and with loss percent of ${lossPercent}% `
+        `😔 Hey,You have made loss 📉 of ${loss} and with loss percent of ${lossPercent}% `
       );
     }
     setError("");
+    setPrice('')
+    setNoOfStocks('')
+    setCurrentPrice('')
   };
   return (
     <div className="container">
