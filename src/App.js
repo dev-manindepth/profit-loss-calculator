@@ -31,9 +31,6 @@ export default function App() {
       );
     }
     setError("");
-    setPrice('')
-    setNoOfStocks('')
-    setCurrentPrice('')
   };
   return (
     <div className="container">
@@ -43,19 +40,28 @@ export default function App() {
       <input
         type="number"
         value={price}
-        onChange={(e) => setPrice(e.target.value)}
+        onChange={(e) => {
+          setResult("");
+          setPrice(e.target.value);
+        }}
       />
       <p className="input-label">Quantity of Stocks</p>
       <input
         type="number"
         value={noOfStocks}
-        onChange={(e) => setNoOfStocks(e.target.value)}
+        onChange={(e) => {
+          setResult("");
+          setNoOfStocks(e.target.value);
+        }}
       />
       <p className="input-label">Current Price</p>
       <input
         type="number"
         value={currentPrice}
-        onChange={(e) => setCurrentPrice(e.target.value)}
+        onChange={(e) => {
+          setResult("");
+          setCurrentPrice(e.target.value);
+        }}
       />
       <button className="submit-btn" onClick={calculate}>
         Tell Me!!
